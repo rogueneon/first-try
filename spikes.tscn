@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgwkodjbsqp1f"]
+
+[ext_resource type="Texture2D" uid="uid://jpjdpia0d5j" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_ocdkp"]
+[ext_resource type="PackedScene" uid="uid://c4oq4pwy3kk2a" path="res://first try/hazards.tscn" id="2_bu7xf"]
+
+[node name="spikes" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -8)
+texture = ExtResource("1_ocdkp")
+
+[node name="hazards" parent="." instance=ExtResource("2_bu7xf")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hazards"]
+polygon = PackedVector2Array(-7, 0, -5, -4, -4, -4, -2, 0)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="hazards"]
+position = Vector2(8, 0)
+polygon = PackedVector2Array(-7, 0, -5, -4, -4, -4, -2, 0)
