@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgwkodjbsqp1f"]
 
 [ext_resource type="Texture2D" uid="uid://jpjdpia0d5j" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_ocdkp"]
-[ext_resource type="PackedScene" uid="uid://c4oq4pwy3kk2a" path="res://first try/hazards.tscn" id="2_bu7xf"]
+[ext_resource type="PackedScene" uid="uid://c4oq4pwy3kk2a" path="res://Main/Scene/hazards.tscn" id="2_bu7xf"]
 
 [node name="spikes" type="Node2D"]
 
