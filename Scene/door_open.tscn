@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://bog8s2u1p6k0k"]
+
+[ext_resource type="Texture2D" uid="uid://d3n4o6hmi6tvg" path="res://Recsources/Doors/1 Doors/4.png" id="1_yp1xi"]
+[ext_resource type="Script" path="res://Flow/Script/Door open.gd" id="2_soxw0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnba6"]
+atlas = ExtResource("1_yp1xi")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxtam"]
+atlas = ExtResource("1_yp1xi")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2jjk"]
+atlas = ExtResource("1_yp1xi")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig68f"]
+atlas = ExtResource("1_yp1xi")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi75m"]
+atlas = ExtResource("1_yp1xi")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g35c"]
+atlas = ExtResource("1_yp1xi")
+region = Rect2(160, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jg3gm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnba6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxtam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2jjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig68f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi75m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g35c")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8saol"]
+size = Vector2(26, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ixw0"]
+size = Vector2(20, 39)
+
+[node name="Door open" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_jg3gm")
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_soxw0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-2, 12.5)
+shape = SubResource("RectangleShape2D_8saol")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="AnimatedSprite2D/Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D/StaticBody2D"]
+position = Vector2(11, 12.5)
+shape = SubResource("RectangleShape2D_1ixw0")
+debug_color = Color(0.735816, 0.394943, 0.664327, 0.42)
+
+[connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D/Area2D" method="_on_body_entered"]

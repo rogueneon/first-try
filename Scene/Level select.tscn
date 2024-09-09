@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://duriecyuukjlf"]
+
+[ext_resource type="Script" path="res://Flow/Script/Chapter Select.gd" id="1_yfp7r"]
+[ext_resource type="Texture2D" uid="uid://o4dltuuhycmd" path="res://Recsources/Tilemaps/Pixel Adventure 1/Free/Background/Yellow.png" id="2_3wsp6"]
+
+[sub_resource type="SystemFont" id="SystemFont_6ux6h"]
+font_names = PackedStringArray("Georgia")
+font_italic = true
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_wa5fy"]
+default_font = SubResource("SystemFont_6ux6h")
+default_font_size = 324
+
+[sub_resource type="Theme" id="Theme_85s4w"]
+
+[node name="Levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_yfp7r")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(4.42803e-06, 0.656628, 0.896642, 1)
+self_modulate = Color(0, 0.52638, 0.65116, 1)
+texture_filter = 1
+layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_3wsp6")
+stretch_mode = 1
+
+[node name="Container" type="MarginContainer" parent="."]
+modulate = Color(0.383875, 0.85188, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = -154.0
+offset_top = 438.0
+offset_right = 5396.0
+offset_bottom = 1304.0
+scale = Vector2(0.4, 0.4)
+
+[node name="VBoxContainer" type="GridContainer" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_wa5fy")
+theme_override_constants/h_separation = 210
+theme_override_constants/v_separation = 40
+columns = 3
+
+[node name="Chapter 1" type="Button" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_85s4w")
+text = "Chapter 1"
+flat = true
+
+[node name="Chapter 2" type="Button" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_85s4w")
+text = "Chapter 2"
+flat = true
+
+[node name="Chapter 3" type="Button" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_85s4w")
+text = "Chapter 3"
+flat = true
+
+[node name="Chapter 4" type="Button" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_85s4w")
+text = "Chapter 4"
+flat = true
+
+[node name="Chapter 5" type="Button" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_85s4w")
+text = "Chapter 5"
+flat = true
+
+[node name="Chapter 6" type="Button" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_85s4w")
+text = "Chapter 6"
+flat = true
+
+[connection signal="pressed" from="Container/VBoxContainer/Chapter 1" to="." method="_on_chapter_1_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/Chapter 2" to="." method="_on_chapter_2_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/Chapter 3" to="." method="_on_chapter_3_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/Chapter 4" to="." method="_on_chapter_4_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/Chapter 5" to="." method="_on_chapter_5_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/Chapter 6" to="." method="_on_chapter_6_pressed"]

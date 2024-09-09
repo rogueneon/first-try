@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://osdc0puad3s4"]
+
+[sub_resource type="SystemFont" id="SystemFont_atqxn"]
+font_names = PackedStringArray("Georgia")
+font_italic = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xx0fs"]
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 0.623529)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(1, 1, 1, 0.623529)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+Button/colors/font_outline_color = Color(0.72549, 0.32549, 0.454902, 0)
+Button/colors/font_pressed_color = Color(1, 1, 1, 0.513726)
+Button/font_sizes/font_size = 40
+Button/fonts/font = SubResource("SystemFont_atqxn")
+Button/styles/focus = SubResource("StyleBoxEmpty_xx0fs")

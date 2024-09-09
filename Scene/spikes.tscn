@@ -1,20 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://cgwkodjbsqp1f"]
 
-[ext_resource type="Texture2D" uid="uid://jpjdpia0d5j" path="res://Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_ocdkp"]
-[ext_resource type="PackedScene" uid="uid://c4oq4pwy3kk2a" path="res://Main/Scene/hazards.tscn" id="2_bu7xf"]
+[ext_resource type="Script" path="res://Flow/Script/spikes.gd" id="1_ea3ta"]
+[ext_resource type="Texture2D" uid="uid://jpjdpia0d5j" path="res://Recsources/Tilemaps/Pixel Adventure 1/Free/Traps/Spikes/Idle.png" id="1_ocdkp"]
 
 [node name="spikes" type="Node2D"]
+script = ExtResource("1_ea3ta")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -8)
 texture = ExtResource("1_ocdkp")
 
-[node name="hazards" parent="." instance=ExtResource("2_bu7xf")]
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hazards"]
-polygon = PackedVector2Array(-7, 0, -5, -4, -4, -4, -2, 0)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(13.5625, 0)
+scale = Vector2(3.125, 1.59375)
+polygon = PackedVector2Array(-6.58, 0, -5.94, -2.5098, -4.34, -2.5098, -3.06, -2.5098, -2.42, 0)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="hazards"]
-position = Vector2(8, 0)
-polygon = PackedVector2Array(-7, 0, -5, -4, -4, -4, -2, 0)
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

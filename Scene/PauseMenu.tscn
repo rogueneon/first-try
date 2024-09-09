@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://de62m1o2ot887"]
+
+[ext_resource type="Texture2D" uid="uid://bbjgpvow2nsu2" path="res://Recsources/Backrounds/Space/Space6/Bright/sky.png" id="1_cuois"]
+[ext_resource type="Script" path="res://Flow/Script/Citymove.gd" id="2_8kh2o"]
+[ext_resource type="Texture2D" uid="uid://cndw25547m5vy" path="res://Recsources/Backrounds/Space/Space3/Bright/planets1.png" id="2_olo7e"]
+[ext_resource type="Script" path="res://Flow/Script/Clouds3.gd" id="3_or064"]
+[ext_resource type="Texture2D" uid="uid://8w10pnx80ywt" path="res://Recsources/Backrounds/Space/Space6/Bright/moon.png" id="4_ogtrs"]
+[ext_resource type="Texture2D" uid="uid://oeldnewg3d0b" path="res://Recsources/Backrounds/Space/Space6/Bright/earth.png" id="5_54fnm"]
+[ext_resource type="Theme" uid="uid://osdc0puad3s4" path="res://Flow/Themes/PauseMenu.tres" id="7_8c1ru"]
+[ext_resource type="Script" path="res://Flow/Script/PauseButons.gd" id="7_dy563"]
+
+[node name="Pause menu" type="Node2D"]
+
+[node name="Backround" type="Node2D" parent="."]
+
+[node name="Sky" type="Sprite2D" parent="Backround"]
+position = Vector2(517, 254)
+scale = Vector2(0.408775, 0.479413)
+texture = ExtResource("1_cuois")
+script = ExtResource("2_8kh2o")
+
+[node name="Sky2" type="Sprite2D" parent="Backround/Sky"]
+position = Vector2(-1917, 0)
+texture = ExtResource("1_cuois")
+
+[node name="Sky3" type="Sprite2D" parent="Backround/Sky"]
+position = Vector2(-3829.92, -0.681152)
+texture = ExtResource("1_cuois")
+
+[node name="Planets1" type="Sprite2D" parent="Backround"]
+position = Vector2(465.6, 218.21)
+scale = Vector2(0.408775, 0.479413)
+texture = ExtResource("2_olo7e")
+script = ExtResource("3_or064")
+
+[node name="Planets2" type="Sprite2D" parent="Backround/Planets1"]
+position = Vector2(-1882.7, -52.5846)
+scale = Vector2(0.819894, 0.819894)
+texture = ExtResource("2_olo7e")
+script = ExtResource("3_or064")
+
+[node name="Planets3" type="Sprite2D" parent="Backround/Planets1/Planets2"]
+position = Vector2(-1199.68, 326.228)
+texture = ExtResource("2_olo7e")
+script = ExtResource("3_or064")
+
+[node name="Moon" type="Sprite2D" parent="Backround"]
+position = Vector2(533.048, 190.883)
+scale = Vector2(0.408775, 0.479413)
+texture = ExtResource("4_ogtrs")
+
+[node name="Earth" type="Sprite2D" parent="Backround"]
+position = Vector2(457.424, 254.645)
+scale = Vector2(0.408775, 0.479413)
+texture = ExtResource("5_54fnm")
+
+[node name="Buttons" type="Node2D" parent="."]
+script = ExtResource("7_dy563")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Buttons"]
+offset_left = 355.0
+offset_top = 257.0
+offset_right = 562.0
+offset_bottom = 427.0
+theme = ExtResource("7_8c1ru")
+theme_override_constants/separation = 0
+
+[node name="Continue" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_8c1ru")
+text = "Continue"
+flat = true
+
+[node name="MainMenu" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+flat = true
+
+[node name="Quit" type="Button" parent="Buttons/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="Buttons/VBoxContainer/Continue" to="Buttons" method="_on_continue_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/MainMenu" to="Buttons" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Buttons/VBoxContainer/Quit" to="Buttons" method="_on_quit_pressed"]

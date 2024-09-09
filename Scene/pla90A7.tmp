@@ -1,0 +1,164 @@
+[gd_scene load_steps=15 format=3 uid="uid://b2rp31gpc810k"]
+
+[ext_resource type="Script" path="res://Flow/Script/player.gd" id="1_reed3"]
+[ext_resource type="Texture2D" uid="uid://cmp8g14wv2qla" path="res://Recsources/Characters/Idle 2.png" id="2_jp5pd"]
+[ext_resource type="Texture2D" uid="uid://c3i6xlastm8md" path="res://Recsources/Tilemaps/Pixel Adventure 1/Free/Background/Blue.png" id="9_kfdit"]
+
+[sub_resource type="Curve" id="Curve_f5m6h"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vysrl"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(0, 0, 256, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl7me"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(256, 0, 256, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3idrm"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(512, 0, 256, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwwhh"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(768, 0, 256, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4mi6"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(1024, 0, 256, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w66n"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(1280, 0, 256, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4o8w"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(1536, 0, 256, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad0lb"]
+atlas = ExtResource("2_jp5pd")
+region = Rect2(1792, 0, 256, 169)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ha3m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vysrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl7me")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3idrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwwhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4mi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w66n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4o8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad0lb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_3",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_4",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6dp5"]
+size = Vector2(7.5, 27)
+
+[node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(0, -16)
+collision_layer = 2
+safe_margin = 0.2
+script = ExtResource("1_reed3")
+gravity = null
+fall_gravity = null
+wall_gravity = null
+jump = null
+small_jump = null
+wall_jump_x = null
+wall_jump_y = null
+death_count = null
+max_death_count = null
+max_dash = null
+dash_count = null
+max_jump = null
+curr_jump = null
+walk_speed = 200.0
+decel = null
+acceler = null
+air_Speed = 330.0
+air_decel = 0.015
+air_acceler = 0.051
+dash_speed = 500.0
+dash_max_distiance = 50.0
+dash_curve = SubResource("Curve_f5m6h")
+dash_cooldown = 0.5
+is_dashing = null
+dash_start_positiong = null
+dash_direction = null
+dash_time = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(0.344675, 0.344675)
+sprite_frames = SubResource("SpriteFrames_2ha3m")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.992639
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_x6dp5")
+
+[node name="coyote" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 11.651
+one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(0, -1)
+scale = Vector2(1.55469, 1.51563)
+color = Color(0.396889, 0.396889, 0.396889, 1)
+energy = 0.63
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = ExtResource("9_kfdit")
+texture_scale = 0.8

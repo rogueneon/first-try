@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dhos2pwvxcchf"]
+
+[node name="Chp2Lvl3" type="Node2D"]
+
+[node name="Back" type="Node2D" parent="."]
+
+[node name="Fore" type="Node2D" parent="."]
+
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="Zones" type="Node2D" parent="."]

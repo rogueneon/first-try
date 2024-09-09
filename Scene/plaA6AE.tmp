@@ -314,7 +314,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cthh5"]
-size = Vector2(6.66667, 18.3333)
+size = Vector2(6.66667, 20)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_entbx"]
 polygon = PackedVector2Array(31, 248, 31, 247, 30, 246, 28, 246, 25, 246, 24, 247, 23, 248, 22, 250, 22, 252, 22, 254, 22, 256, 22, 259, 22, 262, 23, 264, 23, 265, 25, 265, 25, 266, 24, 272, 27, 272, 28, 266, 30, 266, 29, 272, 32, 272, 31, 271, 32, 268, 33, 265, 34, 265, 35, 264, 35, 263, 34, 262, 33, 260, 33, 257, 31, 255, 32, 253, 32, 251, 32, 249)
@@ -327,8 +327,8 @@ texture_filter = 1
 position = Vector2(0, -22)
 scale = Vector2(1.2, 1.2)
 collision_layer = 2
-collision_mask = 13
-safe_margin = 0.2
+collision_mask = 5
+safe_margin = 2.0
 script = ExtResource("1_58luf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -340,7 +340,7 @@ autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 process_mode = 3
-position = Vector2(-0.833333, 7.5)
+position = Vector2(-0.833333, 8.33333)
 shape = SubResource("RectangleShape2D_cthh5")
 
 [node name="coyote" type="Timer" parent="."]
@@ -360,7 +360,6 @@ one_shot = true
 
 [node name="DeathTimer" type="Timer" parent="."]
 wait_time = 0.6
-one_shot = true
 
 [node name="DecelTimer" type="Timer" parent="."]
 wait_time = 0.3

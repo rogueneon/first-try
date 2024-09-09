@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cskotgujkw22x"]
 
-[ext_resource type="Texture2D" uid="uid://vsl0mosy14xn" path="res://kenney_platformer-art-deluxe/Ice expansion/Tiles/spikeTop.png" id="1_ads8a"]
+[ext_resource type="Texture2D" uid="uid://vsl0mosy14xn" path="res://Recsources/Tilemaps/kenney_platformer-art-deluxe/Ice expansion/Tiles/spikeTop.png" id="1_ads8a"]
 
 [node name="Ice Spikes" type="Node2D"]
 

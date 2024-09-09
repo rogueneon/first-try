@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxhbedofkmhr2"]
+
+[ext_resource type="Script" path="res://Flow/Script/End Screen.gd" id="1_hgbvu"]
+[ext_resource type="Texture2D" uid="uid://o4dltuuhycmd" path="res://Recsources/Tilemaps/Pixel Adventure 1/Free/Background/Yellow.png" id="1_oxm42"]
+
+[sub_resource type="Theme" id="Theme_qqr45"]
+default_font_size = 0
+
+[sub_resource type="SystemFont" id="SystemFont_oc5ro"]
+font_names = PackedStringArray("Bahnschrift")
+font_weight = 600
+font_stretch = 125
+oversampling = 8.6
+
+[sub_resource type="LabelSettings" id="LabelSettings_22b4i"]
+line_spacing = 0.78
+font = SubResource("SystemFont_oc5ro")
+font_size = 183
+font_color = Color(0.502294, 0.333333, 0.341571, 1)
+outline_size = 3
+outline_color = Color(0.501961, 0.333333, 0.341176, 0.227451)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(1, 4.2)
+
+[sub_resource type="SystemFont" id="SystemFont_reoil"]
+font_names = PackedStringArray("Georgia")
+font_italic = true
+font_weight = 100
+font_stretch = 75
+force_autohinter = true
+hinting = 2
+multichannel_signed_distance_field = true
+oversampling = 10.0
+
+[sub_resource type="Theme" id="Theme_k6ugn"]
+default_font = SubResource("SystemFont_reoil")
+default_font_size = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w2us3"]
+
+[node name="End Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+script = ExtResource("1_hgbvu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.0874643, 0.320912, 0.456442, 1)
+self_modulate = Color(0.969449, 0.733602, 0.714664, 1)
+texture_filter = 1
+layout_mode = 1
+offset_top = 2.0
+offset_right = 1916.0
+offset_bottom = 1084.0
+theme = SubResource("Theme_qqr45")
+texture = ExtResource("1_oxm42")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_top = 80.0
+offset_right = 1916.0
+offset_bottom = 307.0
+text = "Thanks For Playing"
+label_settings = SubResource("LabelSettings_22b4i")
+horizontal_alignment = 1
+
+[node name="Container" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(0.065, 0)
+layout_mode = 0
+offset_left = 590.0
+offset_top = 458.0
+offset_right = 791.0
+offset_bottom = 581.0
+scale = Vector2(3.74, 3.74)
+theme = SubResource("Theme_k6ugn")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_w2us3")
+
+[node name="BoxContainer" type="BoxContainer" parent="Container"]
+layout_mode = 2
+theme_override_constants/separation = 3
+vertical = true
+
+[node name="MainMenu" type="Button" parent="Container/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_colors/font_pressed_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_colors/font_hover_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_colors/font_focus_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_font_sizes/font_size = 37
+action_mode = 0
+text = "Main Menu"
+flat = true
+
+[node name="Quit" type="Button" parent="Container/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_colors/font_hover_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_colors/font_focus_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_font_sizes/font_size = 43
+action_mode = 0
+text = "Quit"
+flat = true
+
+[connection signal="pressed" from="Container/BoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Container/BoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,171 @@
+[gd_scene load_steps=13 format=3 uid="uid://b1nyxjx3maca6"]
+
+[ext_resource type="Script" path="res://Flow/Script/MainMenu.gd" id="1_kbn6v"]
+[ext_resource type="Texture2D" uid="uid://yy5a8axvnamd" path="res://Recsources/Backrounds/City/city 5/1.png" id="2_hbtow"]
+[ext_resource type="Texture2D" uid="uid://dsfb50gkgatkq" path="res://Recsources/Backrounds/City/city 5/2.png" id="3_vaftq"]
+[ext_resource type="Script" path="res://Flow/Script/Citymove.gd" id="3_w7jd6"]
+[ext_resource type="Texture2D" uid="uid://b3fx76f23qoiv" path="res://Recsources/Backrounds/City/city 5/3.png" id="4_olpsx"]
+[ext_resource type="Texture2D" uid="uid://3hv0n6lbqeh8" path="res://Recsources/Backrounds/City/city 5/4.png" id="5_fhjhl"]
+[ext_resource type="Texture2D" uid="uid://btnle468n6luu" path="res://Recsources/Backrounds/City/city 5/5.png" id="6_4txtp"]
+
+[sub_resource type="SystemFont" id="SystemFont_oc5ro"]
+font_names = PackedStringArray("Georgia")
+font_italic = true
+font_weight = 999
+generate_mipmaps = true
+subpixel_positioning = 0
+oversampling = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_22b4i"]
+line_spacing = 8.4
+font = SubResource("SystemFont_oc5ro")
+font_size = 361
+font_color = Color(1, 1, 1, 0.321569)
+outline_size = 17
+outline_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(1, -1.7)
+
+[sub_resource type="SystemFont" id="SystemFont_6ux6h"]
+font_names = PackedStringArray("Georgia")
+font_weight = 999
+subpixel_positioning = 0
+multichannel_signed_distance_field = true
+oversampling = 10.0
+
+[sub_resource type="Theme" id="Theme_wa5fy"]
+default_font = SubResource("SystemFont_6ux6h")
+default_font_size = 300
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_etv6j"]
+
+[node name="MainMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_kbn6v")
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(961.92, 541.08)
+scale = Vector2(3.34, 3.34)
+texture = ExtResource("2_hbtow")
+
+[node name="2" type="Sprite2D" parent="1"]
+texture = ExtResource("3_vaftq")
+script = ExtResource("3_w7jd6")
+
+[node name="3" type="Sprite2D" parent="1"]
+texture = ExtResource("4_olpsx")
+script = ExtResource("3_w7jd6")
+
+[node name="4" type="Sprite2D" parent="1"]
+texture = ExtResource("5_fhjhl")
+script = ExtResource("3_w7jd6")
+
+[node name="5" type="Sprite2D" parent="1"]
+texture = ExtResource("6_4txtp")
+script = ExtResource("3_w7jd6")
+
+[node name="6" type="Sprite2D" parent="1"]
+position = Vector2(-575.749, 0)
+texture = ExtResource("3_vaftq")
+script = ExtResource("3_w7jd6")
+
+[node name="7" type="Sprite2D" parent="1"]
+position = Vector2(-575.749, 0)
+texture = ExtResource("4_olpsx")
+script = ExtResource("3_w7jd6")
+
+[node name="8" type="Sprite2D" parent="1"]
+position = Vector2(-575.749, 0)
+texture = ExtResource("5_fhjhl")
+script = ExtResource("3_w7jd6")
+
+[node name="9" type="Sprite2D" parent="1"]
+position = Vector2(-575.749, 0)
+texture = ExtResource("6_4txtp")
+script = ExtResource("3_w7jd6")
+
+[node name="10" type="Sprite2D" parent="1"]
+position = Vector2(-1151.2, 0)
+texture = ExtResource("3_vaftq")
+script = ExtResource("3_w7jd6")
+
+[node name="11" type="Sprite2D" parent="1"]
+position = Vector2(-1151.2, 0)
+texture = ExtResource("4_olpsx")
+script = ExtResource("3_w7jd6")
+
+[node name="12" type="Sprite2D" parent="1"]
+position = Vector2(-1151.2, 0)
+texture = ExtResource("5_fhjhl")
+script = ExtResource("3_w7jd6")
+
+[node name="13" type="Sprite2D" parent="1"]
+position = Vector2(-1151.2, 0)
+texture = ExtResource("6_4txtp")
+script = ExtResource("3_w7jd6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 260.0
+offset_top = -72.0
+offset_right = 1197.0
+offset_bottom = 339.0
+scale = Vector2(1.53, 1.53)
+text = "Flow"
+label_settings = SubResource("LabelSettings_22b4i")
+horizontal_alignment = 1
+
+[node name="Container" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 774.0
+offset_top = 557.0
+offset_right = 1559.03
+offset_bottom = 1363.0
+scale = Vector2(0.56, 0.56)
+focus_neighbor_bottom = NodePath("VBoxContainer/Quit")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_wa5fy")
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="Play" type="Button" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_colors/font_hover_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_colors/font_focus_color = Color(0, 0.941176, 0.952941, 0.439216)
+theme_override_colors/font_hover_pressed_color = Color(0, 0.941176, 0.952941, 0.439216)
+text = "Play
+"
+flat = true
+
+[node name="Quit" type="Button" parent="Container/VBoxContainer"]
+custom_minimum_size = Vector2(0.045, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.548673, 0.485903, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_colors/font_hover_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_colors/font_focus_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.54902, 0.486275, 0.537255)
+theme_override_styles/hover = SubResource("StyleBoxEmpty_etv6j")
+toggle_mode = true
+text = "Quit
+"
+flat = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.752941, 0.941176, 1, 1)
+
+[connection signal="pressed" from="Container/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

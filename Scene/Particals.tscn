@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvhe11qdxu0o2"]
+
+[sub_resource type="Gradient" id="Gradient_evvxh"]
+colors = PackedColorArray(1, 1, 1, 1, 0.00114351, 0.0766395, 0.130183, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ox0fw"]
+gradient = SubResource("Gradient_evvxh")
+
+[sub_resource type="Curve" id="Curve_pmgqn"]
+_data = [Vector2(0.00980392, 0.757009), 0.0, 0.0, 0, 0, Vector2(0.977941, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_lm6tv"]
+curve = SubResource("Curve_pmgqn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b0x3x"]
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 42.11
+initial_velocity_min = 22.93
+initial_velocity_max = 32.1
+gravity = Vector3(0, 1, 0)
+linear_accel_min = 6.42
+linear_accel_max = 6.42
+scale_curve = SubResource("CurveTexture_lm6tv")
+color = Color(0.500211, 0.796125, 0.994668, 1)
+color_ramp = SubResource("GradientTexture1D_ox0fw")
+turbulence_enabled = true
+turbulence_noise_scale = 3.259
+
+[node name="Partical;s" type="Node2D"]
+texture_filter = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(222, 205)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_b0x3x")
+lifetime = 8.89
+speed_scale = 1.27
+collision_base_size = 0.0
