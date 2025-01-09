@@ -1,0 +1,157 @@
+[gd_scene load_steps=17 format=3 uid="uid://bs6jfn64l02hc"]
+
+[ext_resource type="Script" path="res://Flow/Scene/Chapter 2.gd" id="1_26ixf"]
+[ext_resource type="Texture2D" uid="uid://c0swtyguu1lsw" path="res://Recsources/Backrounds/Mountains/m2/1.png" id="1_p5sf7"]
+[ext_resource type="Texture2D" uid="uid://cq8pwwc6lne4o" path="res://Recsources/Backrounds/Mountains/m2/2.png" id="2_mv1to"]
+[ext_resource type="Texture2D" uid="uid://d2bj71dd3sipc" path="res://Recsources/Backrounds/Mountains/m2/3.png" id="3_5k534"]
+[ext_resource type="Texture2D" uid="uid://dvxc0hx0tqa4i" path="res://Recsources/Backrounds/Clouds/Clouds 2/3.png" id="4_1fo7u"]
+[ext_resource type="Script" path="res://Flow/Script/Clouds.gd" id="5_asxw8"]
+[ext_resource type="Texture2D" uid="uid://duwp2mf3wu0i1" path="res://Recsources/Backrounds/Mountains/m2/4.png" id="6_cx2r0"]
+[ext_resource type="Texture2D" uid="uid://dmyjkf72ymovs" path="res://Recsources/Backrounds/Clouds/Clouds 5/5.png" id="7_06vra"]
+[ext_resource type="Script" path="res://Flow/Script/Clouds2.gd" id="8_6vgqd"]
+[ext_resource type="Texture2D" uid="uid://drpuqlyyn1fj5" path="res://Recsources/Backrounds/Mountains/m2/5.png" id="9_13vkw"]
+[ext_resource type="Texture2D" uid="uid://d12rgp2migytn" path="res://Recsources/Backrounds/Mountains/m2/6.png" id="10_s6ge0"]
+[ext_resource type="Texture2D" uid="uid://be07v7gde2c7w" path="res://Recsources/Backrounds/Mountains/m2/7.png" id="11_ty6lp"]
+[ext_resource type="Theme" uid="uid://cxp24nmxqqrnl" path="res://Flow/Themes/Chapter Selec11t.tres" id="12_wdygt"]
+[ext_resource type="Texture2D" uid="uid://eoiyyc5l3dr6" path="res://Recsources/Tilemaps/keyboard_arrow_right_outline.png" id="13_mf5bn"]
+[ext_resource type="Texture2D" uid="uid://blskr3rb4vfd5" path="res://Recsources/Tilemaps/keyboard_arrow_left_outline.png" id="14_yd7rv"]
+[ext_resource type="LabelSettings" uid="uid://coar24vuioxfk" path="res://Flow/Themes/HUDfont.tres" id="16_8qsvd"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_26ixf")
+
+[node name="Backrounds" type="Sprite2D" parent="."]
+position = Vector2(962.68, 545.32)
+scale = Vector2(3.36, 3.36)
+texture = ExtResource("1_p5sf7")
+
+[node name="2" type="Sprite2D" parent="Backrounds"]
+texture = ExtResource("2_mv1to")
+
+[node name="3" type="Sprite2D" parent="Backrounds"]
+texture = ExtResource("3_5k534")
+
+[node name="Clouds" type="Sprite2D" parent="Backrounds"]
+position = Vector2(-8.83332, -10.2143)
+scale = Vector2(0.974151, 0.974151)
+texture = ExtResource("4_1fo7u")
+script = ExtResource("5_asxw8")
+
+[node name="Clouds2" type="Sprite2D" parent="Backrounds"]
+position = Vector2(551.583, -11.1071)
+scale = Vector2(0.974151, 0.974151)
+texture = ExtResource("4_1fo7u")
+script = ExtResource("5_asxw8")
+
+[node name="Clouds3" type="Sprite2D" parent="Backrounds"]
+position = Vector2(1111.11, -11.1071)
+scale = Vector2(0.974151, 0.974151)
+texture = ExtResource("4_1fo7u")
+script = ExtResource("5_asxw8")
+
+[node name="4" type="Sprite2D" parent="Backrounds"]
+texture = ExtResource("6_cx2r0")
+
+[node name="Clouds4" type="Sprite2D" parent="Backrounds"]
+position = Vector2(-230.291, 62.351)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("7_06vra")
+script = ExtResource("8_6vgqd")
+
+[node name="Clouds5" type="Sprite2D" parent="Backrounds"]
+position = Vector2(47.9824, 62.0533)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("7_06vra")
+script = ExtResource("8_6vgqd")
+
+[node name="Clouds6" type="Sprite2D" parent="Backrounds"]
+position = Vector2(324.47, 62.0533)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("7_06vra")
+script = ExtResource("8_6vgqd")
+
+[node name="Clouds7" type="Sprite2D" parent="Backrounds"]
+position = Vector2(602.447, 62.0533)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("7_06vra")
+script = ExtResource("8_6vgqd")
+
+[node name="Clouds8" type="Sprite2D" parent="Backrounds"]
+position = Vector2(881.613, 62.0533)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("7_06vra")
+script = ExtResource("8_6vgqd")
+
+[node name="5" type="Sprite2D" parent="Backrounds"]
+texture = ExtResource("9_13vkw")
+
+[node name="6" type="Sprite2D" parent="Backrounds"]
+texture = ExtResource("10_s6ge0")
+
+[node name="7" type="Sprite2D" parent="Backrounds"]
+texture = ExtResource("11_ty6lp")
+
+[node name="Chapter 2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 80.0
+offset_right = 1643.0
+offset_bottom = 352.0
+scale = Vector2(0.85, 0.85)
+theme = ExtResource("12_wdygt")
+theme_override_colors/font_color = Color(0, 0.658824, 0.509804, 1)
+theme_override_colors/font_hover_color = Color(2.02149e-06, 0.887042, 0.690379, 1)
+text = "Chapter 2"
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 838.0
+offset_right = 1632.0
+offset_bottom = 1110.0
+theme = ExtResource("12_wdygt")
+theme_override_colors/font_color = Color(0, 0.658824, 0.509804, 1)
+theme_override_colors/font_hover_color = Color(2.02149e-06, 0.887042, 0.690379, 1)
+text = "MainMenu"
+flat = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1599.0
+offset_top = 49.0
+offset_right = 1671.0
+offset_bottom = 121.0
+scale = Vector2(4.162, 4.162)
+theme = ExtResource("12_wdygt")
+theme_override_colors/icon_normal_color = Color(0.67754, 0.304205, 0.627795, 1)
+theme_override_colors/icon_hover_color = Color(0.992157, 0, 0.741176, 1)
+icon = ExtResource("13_mf5bn")
+flat = true
+
+[node name="Button" type="Button" parent="Button3"]
+layout_mode = 0
+offset_left = -376.502
+offset_right = -304.502
+offset_bottom = 72.0
+theme = ExtResource("12_wdygt")
+theme_override_colors/icon_normal_color = Color(0.67754, 0.304205, 0.627795, 1)
+theme_override_colors/icon_hover_color = Color(0.992157, 0, 0.741176, 1)
+icon = ExtResource("14_yd7rv")
+flat = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 49.0
+offset_right = 174.0
+offset_bottom = 72.0
+scale = Vector2(2.145, 2.145)
+text = "Chapter 1"
+label_settings = ExtResource("16_8qsvd")
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button3/Button" to="." method="_on_button_pressed"]

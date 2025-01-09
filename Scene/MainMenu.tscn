@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b1nyxjx3maca6"]
+[gd_scene load_steps=14 format=3 uid="uid://b1nyxjx3maca6"]
 
 [ext_resource type="Script" path="res://Flow/Script/MainMenu.gd" id="1_kbn6v"]
 [ext_resource type="Texture2D" uid="uid://yy5a8axvnamd" path="res://Recsources/Backrounds/City/city 5/1.png" id="2_hbtow"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b3fx76f23qoiv" path="res://Recsources/Backrounds/City/city 5/3.png" id="4_olpsx"]
 [ext_resource type="Texture2D" uid="uid://3hv0n6lbqeh8" path="res://Recsources/Backrounds/City/city 5/4.png" id="5_fhjhl"]
 [ext_resource type="Texture2D" uid="uid://btnle468n6luu" path="res://Recsources/Backrounds/City/city 5/5.png" id="6_4txtp"]
+[ext_resource type="AudioStream" uid="uid://bquspqgoap22r" path="res://Flow/Evening.mp3" id="8_8vkfu"]
 
 [sub_resource type="SystemFont" id="SystemFont_oc5ro"]
 font_names = PackedStringArray("Georgia")
@@ -166,6 +167,11 @@ flat = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.752941, 0.941176, 1, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("8_8vkfu")
+autoplay = true
 
 [connection signal="pressed" from="Container/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

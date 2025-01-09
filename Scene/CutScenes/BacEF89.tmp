@@ -1,0 +1,1168 @@
+[gd_scene load_steps=21 format=3 uid="uid://cus4sjxaqsx72"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_suo87"]
+[ext_resource type="Texture2D" uid="uid://tygagseyubjc" path="res://Flow/Remove background project (1).png" id="3_e76cr"]
+[ext_resource type="Texture2D" uid="uid://c8a75bsdqws7a" path="res://Recsources/Tilemaps/keyboard_a_outline.png" id="5_stfje"]
+[ext_resource type="Texture2D" uid="uid://2jdoix3keq2j" path="res://Recsources/Tilemaps/keyboard_d_outline.png" id="6_6vtud"]
+[ext_resource type="LabelSettings" uid="uid://coar24vuioxfk" path="res://Flow/Themes/HUDfont.tres" id="8_wsgyi"]
+[ext_resource type="Texture2D" uid="uid://biys1hn80yove" path="res://Recsources/Tilemaps/keyboard_space_outline.png" id="9_bk2s7"]
+[ext_resource type="Texture2D" uid="uid://cm2m4juvxw0lr" path="res://Recsources/Tilemaps/keyboard_enter_outline.png" id="10_hkn3k"]
+[ext_resource type="Texture2D" uid="uid://dlfjam6t53nrl" path="res://Recsources/Tilemaps/keyboard_shift_outline.png" id="10_hynps"]
+[ext_resource type="Texture2D" uid="uid://bckyqmenvq7yo" path="res://Recsources/Tilemaps/keyboard_ctrl_outline.png" id="11_ytnrt"]
+
+[sub_resource type="SystemFont" id="SystemFont_5vsr3"]
+font_names = PackedStringArray("Georgia")
+hinting = 2
+multichannel_signed_distance_field = true
+msdf_size = 200
+oversampling = 9.3
+
+[sub_resource type="LabelSettings" id="LabelSettings_5udlq"]
+line_spacing = 3.985
+font = SubResource("SystemFont_5vsr3")
+font_size = 25
+font_color = Color(0.868985, 0.868985, 0.868985, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.435, 2.015)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1sncx"]
+line_spacing = 3.985
+font = SubResource("SystemFont_5vsr3")
+font_size = 29
+font_color = Color(0.868985, 0.868985, 0.868985, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.435, 2.015)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w8aef"]
+line_spacing = 3.985
+font = SubResource("SystemFont_5vsr3")
+font_size = 23
+font_color = Color(0.868985, 0.868985, 0.868985, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.435, 2.015)
+
+[sub_resource type="LabelSettings" id="LabelSettings_htgso"]
+line_spacing = 3.985
+font = SubResource("SystemFont_5vsr3")
+font_size = 23
+font_color = Color(0.868985, 0.868985, 0.868985, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.435, 2.015)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sxvqv"]
+line_spacing = 3.985
+font = SubResource("SystemFont_5vsr3")
+font_size = 23
+font_color = Color(0.868985, 0.868985, 0.868985, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.435, 2.015)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bnt0x"]
+line_spacing = 3.985
+font = SubResource("SystemFont_5vsr3")
+font_size = 23
+font_color = Color(0.868985, 0.868985, 0.868985, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.435, 2.015)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3wqjl"]
+line_spacing = 3.985
+font = SubResource("SystemFont_5vsr3")
+font_size = 23
+font_color = Color(0.868985, 0.868985, 0.868985, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(3.435, 2.015)
+
+[sub_resource type="Animation" id="Animation_1cnli"]
+resource_name = "Backrounbd"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(-104, -64), Vector2(-165, -141)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4, 6),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(-177, -59), Vector2(-190, -126)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(10, 12),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(-131, -81), Vector2(-186, 9)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label6:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(12, 14),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(-154, -83), Vector2(13, -141)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label7:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(14, 16),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(-100, -119), Vector2(13, -88)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(6, 8),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(-147, -93), Vector2(-197, -93)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label2:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4, 6),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.45, 0.45)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label3:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(6, 8),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(8, 10),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(-144, -72), Vector2(-197, -41)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label4:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(8, 10),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label5:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(10, 12),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Label2:label_settings:font_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2.9, 4.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.870588, 0.870588, 0.870588, 0), Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label2:label_settings:outline_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(2.9, 4.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Label2:label_settings:shadow_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(2.9, 4.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Label3:label_settings:font_color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(5, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.870588, 0.870588, 0.870588, 0), Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Label3:label_settings:outline_color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(5, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Label3:label_settings:shadow_color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(5, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Label4:label_settings:font_color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(6.9, 8.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.870588, 0.870588, 0.870588, 0), Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Label4:label_settings:outline_color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(6.9, 8.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Label4:label_settings:shadow_color")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(6.9, 8.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Label5:label_settings:font_color")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(8.9, 10.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.870588, 0.870588, 0.870588, 0), Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Label5:label_settings:outline_color")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(8.9, 10.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Label5:label_settings:shadow_color")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(8.9, 10.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Label6:scale")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(12, 14),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Label6:label_settings:font_color")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(10.9, 12.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.870588, 0.870588, 0.870588, 0), Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Label6:label_settings:outline_color")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(10.9, 12.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Label6:label_settings:shadow_color")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(10.9, 12.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Label7:scale")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(14, 16),
+"transitions": PackedFloat32Array(0.366023, 0.366023),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.6, 0.6)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Label7:label_settings:font_color")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(12.9, 14.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.870588, 0.870588, 0.870588, 0), Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Label7:label_settings:outline_color")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(12.9, 14.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Label7:label_settings:shadow_color")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(12.9, 14.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Label:label_settings:font_color")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(1.2, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.870588, 0.870588, 0.870588, 0), Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Label:label_settings:outline_color")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(1.2, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Label:label_settings:shadow_color")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(1.2, 3.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("RemoveBackgroundProject(1)2:position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(20),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -35)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("RemoveBackgroundProject(1)2:modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(20, 20.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wkbhb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-58, -114)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-88, -152)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-91, -152)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label6:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-91, -152)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label7:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-95, -152)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-91, -152)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label2:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label3:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6, 0.6)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-91, -93)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label4:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Label5:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Label2:label_settings:font_color")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Label2:label_settings:outline_color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Label2:label_settings:shadow_color")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Label3:label_settings:font_color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Label3:label_settings:outline_color")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Label3:label_settings:shadow_color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Label4:label_settings:font_color")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Label4:label_settings:outline_color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Label4:label_settings:shadow_color")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Label5:label_settings:font_color")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Label5:label_settings:outline_color")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Label5:label_settings:shadow_color")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Label6:scale")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Label6:label_settings:font_color")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Label6:label_settings:outline_color")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Label6:label_settings:shadow_color")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Label7:scale")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Label7:label_settings:font_color")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Label7:label_settings:outline_color")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Label7:label_settings:shadow_color")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Label:label_settings:font_color")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.868985, 0.868985, 0.868985, 1)]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Label:label_settings:outline_color")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Label:label_settings:shadow_color")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("RemoveBackgroundProject(1)2:position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -35)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("RemoveBackgroundProject(1)2:modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.780392, 0.780392, 0.780392, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dnj4k"]
+_data = {
+"Backrounbd": SubResource("Animation_1cnli"),
+"RESET": SubResource("Animation_wkbhb")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_suo87")
+
+[node name="RemoveBackgroundProject(1)" type="Sprite2D" parent="."]
+modulate = Color(0.779291, 0.779291, 0.779291, 1)
+position = Vector2(0, -32)
+scale = Vector2(6.10651, 6.61361)
+texture = ExtResource("3_e76cr")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -58.0
+offset_top = -114.0
+offset_right = 153.0
+offset_bottom = -85.0
+pivot_offset = Vector2(0.08, 0)
+text = "This is Linne."
+label_settings = SubResource("LabelSettings_5udlq")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -88.0
+offset_top = -152.0
+offset_right = 267.0
+offset_bottom = -78.0
+text = "she lives on a farm with her Grandpa and Grandma."
+label_settings = SubResource("LabelSettings_1sncx")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -91.0
+offset_top = -152.0
+offset_right = 199.0
+offset_bottom = 5.0
+scale = Vector2(0.6, 0.6)
+text = "Lena and her Grandpa are the best melon farmers in all of the tri-state area."
+label_settings = SubResource("LabelSettings_w8aef")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -91.0
+offset_top = -93.0
+offset_right = 197.0
+offset_bottom = 10.0
+text = "One day a competing melon farmer put a HIT on the farms melons. "
+label_settings = SubResource("LabelSettings_htgso")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="."]
+offset_left = -91.0
+offset_top = -152.0
+offset_right = 164.0
+offset_bottom = -25.0
+text = "They Hired a Melon hit squad on Linne's farm."
+label_settings = SubResource("LabelSettings_sxvqv")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="."]
+offset_left = -91.0
+offset_top = -152.0
+offset_right = 211.0
+offset_bottom = -45.0
+text = "The melon hit squad came and stole all of the prized melons on the farm."
+label_settings = SubResource("LabelSettings_bnt0x")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label7" type="Label" parent="."]
+offset_left = -95.0
+offset_top = -152.0
+offset_right = 207.0
+offset_bottom = -64.0
+text = "Linne is now on a quest to get all of her and her grandparent's melons back."
+label_settings = SubResource("LabelSettings_3wqjl")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+callback_mode_method = 1
+libraries = {
+"": SubResource("AnimationLibrary_dnj4k")
+}
+autoplay = "Backrounbd"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -53)
+zoom = Vector2(3.05, 3.05)
+
+[node name="RemoveBackgroundProject(1)2" type="Sprite2D" parent="."]
+modulate = Color(0.780392, 0.780392, 0.780392, 0)
+position = Vector2(0, -35)
+scale = Vector2(6.10651, 6.61361)
+texture = ExtResource("3_e76cr")
+
+[node name="KeyboardAOutline2" type="Sprite2D" parent="RemoveBackgroundProject(1)2"]
+modulate = Color(0.926637, 0.631198, 0.720518, 1)
+position = Vector2(-22.1076, -12.3987)
+scale = Vector2(0.177352, 0.163753)
+texture = ExtResource("5_stfje")
+
+[node name="KeyboardDOutline2" type="Sprite2D" parent="RemoveBackgroundProject(1)2/KeyboardAOutline2"]
+position = Vector2(49.1163, -0.0796707)
+scale = Vector2(1, 1)
+texture = ExtResource("6_6vtud")
+
+[node name="Label8" type="Label" parent="RemoveBackgroundProject(1)2"]
+offset_left = -31.1143
+offset_top = -8.01378
+offset_right = 113.886
+offset_bottom = 14.9862
+scale = Vector2(0.18, 0.18)
+text = "Keys To Move"
+label_settings = ExtResource("8_wsgyi")
+
+[node name="KeyboardSpaceOutline" type="Sprite2D" parent="RemoveBackgroundProject(1)2"]
+modulate = Color(0.92549, 0.631373, 0.721569, 1)
+position = Vector2(-17.8498, 2.41925)
+scale = Vector2(0.312167, 0.288231)
+texture = ExtResource("9_bk2s7")
+
+[node name="Label9" type="Label" parent="RemoveBackgroundProject(1)2"]
+offset_left = -30.4593
+offset_top = 6.95535
+offset_right = 106.541
+offset_bottom = 29.9554
+scale = Vector2(0.19, 0.19)
+text = "bar To Jump"
+label_settings = ExtResource("8_wsgyi")
+
+[node name="KeyboardShiftOutline" type="Sprite2D" parent="RemoveBackgroundProject(1)2"]
+modulate = Color(0.92549, 0.631373, 0.721569, 1)
+position = Vector2(16.8672, -11.3403)
+scale = Vector2(0.312126, 0.288194)
+texture = ExtResource("10_hynps")
+
+[node name="KeyboardCtrlOutline" type="Sprite2D" parent="RemoveBackgroundProject(1)2"]
+modulate = Color(0.92549, 0.631373, 0.721569, 1)
+position = Vector2(16.8672, 1.66263)
+scale = Vector2(0.235384, 0.217336)
+texture = ExtResource("11_ytnrt")
+
+[node name="Label10" type="Label" parent="RemoveBackgroundProject(1)2"]
+offset_left = 6.22287
+offset_top = -6.35054
+offset_right = 138.223
+offset_bottom = 16.6495
+scale = Vector2(0.15, 0.15)
+text = "Key To Dash"
+label_settings = ExtResource("8_wsgyi")
+
+[node name="Label11" type="Label" parent="RemoveBackgroundProject(1)2"]
+offset_left = 3.27519
+offset_top = 7.55956
+offset_right = 184.275
+offset_bottom = 30.5596
+scale = Vector2(0.15, 0.15)
+text = "Key To WallGrab"
+label_settings = ExtResource("8_wsgyi")
+
+[node name="Label" type="Label" parent="RemoveBackgroundProject(1)2"]
+offset_left = -30.4593
+offset_top = 11.5671
+offset_right = 172.541
+offset_bottom = 34.5671
+scale = Vector2(0.34, 0.34)
+text = "Press      To Start"
+label_settings = ExtResource("8_wsgyi")
+
+[node name="KeyboardEnterOutline" type="Sprite2D" parent="RemoveBackgroundProject(1)2"]
+modulate = Color(0.80282, 0.515514, 0.728446, 1)
+position = Vector2(-5.73159, 15.3471)
+scale = Vector2(0.135613, 0.125215)
+texture = ExtResource("10_hkn3k")

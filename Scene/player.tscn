@@ -1,6 +1,6 @@
-[gd_scene load_steps=52 format=3 uid="uid://b2rp31gpc810k"]
+[gd_scene load_steps=64 format=3 uid="uid://b2rp31gpc810k"]
 
-[ext_resource type="Script" path="res://Flow/Script/playerv0.2.gd" id="1_58luf"]
+[ext_resource type="Script" path="res://Flow/Script/Player.gd" id="1_mg474"]
 [ext_resource type="Texture2D" uid="uid://76qhsry6r2x0" path="res://Recsources/Characters/Knight_player_1.3/Knight_player/ShitRoll11.png" id="2_no4h8"]
 [ext_resource type="Texture2D" uid="uid://c2cflhev4ijep" path="res://Recsources/Characters/Knight_player_1.3/Knight_player/Dying_KG_1.png" id="3_q8oql"]
 [ext_resource type="Texture2D" uid="uid://dswv2ghefv77" path="res://Recsources/Characters/Knight_player_1.3/Knight_player/Fall_KG_1.png" id="4_qq6vl"]
@@ -10,6 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://c8u5v1yhbpsyq" path="res://Recsources/Characters/Knight_player_1.3/Knight_player/Walking_KG_1.png" id="7_qdtcc"]
 [ext_resource type="Texture2D" uid="uid://b5tp2hwtkmadt" path="res://Recsources/Characters/Knight_player_1.3/Knight_player/Wallside_KG_1.png" id="8_g115v"]
 [ext_resource type="Texture2D" uid="uid://c3i6xlastm8md" path="res://Recsources/Tilemaps/Pixel Adventure 1/Free/Background/Blue.png" id="9_kfdit"]
+[ext_resource type="Script" path="res://Flow/States/StateManager.gd" id="11_kw1r6"]
+[ext_resource type="Script" path="res://Flow/States/IdleState.gd" id="12_8tvpr"]
+[ext_resource type="Script" path="res://Flow/States/JumpState.gd" id="13_506gm"]
+[ext_resource type="Script" path="res://Flow/States/FallState.gd" id="14_sabxo"]
+[ext_resource type="Script" path="res://Flow/States/WalkState.gd" id="15_ekt4r"]
+[ext_resource type="Script" path="res://Flow/States/DashState.gd" id="16_s0l5x"]
+[ext_resource type="Script" path="res://Flow/States/DashdirlessState.gd" id="17_7vqep"]
+[ext_resource type="Script" path="res://Flow/States/WallState.gd" id="17_cnwr6"]
+[ext_resource type="Script" path="res://Flow/States/WallJumpState.gd" id="18_rcwy2"]
+[ext_resource type="Script" path="res://Flow/States/DeathState.gd" id="20_lw2d8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnqm6"]
 atlas = ExtResource("2_no4h8")
@@ -322,6 +332,16 @@ polygon = PackedVector2Array(31, 248, 31, 247, 30, 246, 28, 246, 25, 246, 24, 24
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xloq8"]
 size = Vector2(5, 21.6667)
 
+[sub_resource type="SystemFont" id="SystemFont_r2ye8"]
+font_names = PackedStringArray("Georgia")
+font_weight = 725
+font_stretch = 125
+allow_system_fallback = false
+oversampling = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ghxea"]
+font = SubResource("SystemFont_r2ye8")
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 position = Vector2(0, -22)
@@ -329,7 +349,7 @@ scale = Vector2(1.2, 1.2)
 collision_layer = 2
 collision_mask = 13
 safe_margin = 0.2
-script = ExtResource("1_58luf")
+script = ExtResource("1_mg474")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.833333, 6.66667)
@@ -340,6 +360,7 @@ autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 process_mode = 3
+visible = false
 position = Vector2(-0.833333, 7.5)
 shape = SubResource("RectangleShape2D_cthh5")
 
@@ -397,6 +418,103 @@ collision_mask = 4
 visible = false
 position = Vector2(3.97364e-07, 6.66667)
 shape = SubResource("RectangleShape2D_xloq8")
+
+[node name="StateManager" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+script = ExtResource("11_kw1r6")
+starting_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateManager" node_paths=PackedStringArray("jump_state", "walk_state", "dash_state", "dashdirless_state", "death_state")]
+script = ExtResource("12_8tvpr")
+jump_state = NodePath("../Jump")
+walk_state = NodePath("../Walk")
+dash_state = NodePath("../Dash")
+dashdirless_state = NodePath("../Dashdirless")
+death_state = NodePath("../Death")
+animation_name = "Idle"
+
+[node name="Jump" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "idle_state", "walk_state", "dash_state", "dashdirless_state", "wall_state", "death_state")]
+script = ExtResource("13_506gm")
+fall_state = NodePath("../Fall")
+idle_state = NodePath("../Idle")
+walk_state = NodePath("../Walk")
+dash_state = NodePath("../Dash")
+dashdirless_state = NodePath("../Dashdirless")
+wall_state = NodePath("../Wall")
+death_state = NodePath("../Death")
+animation_name = "Jump"
+
+[node name="Fall" type="Node" parent="StateManager" node_paths=PackedStringArray("idle_state", "walk_state", "dash_state", "dashdirless_state", "wall_state", "death_state")]
+script = ExtResource("14_sabxo")
+idle_state = NodePath("../Idle")
+walk_state = NodePath("../Walk")
+dash_state = NodePath("../Dash")
+dashdirless_state = NodePath("../Dashdirless")
+wall_state = NodePath("../Wall")
+death_state = NodePath("../Death")
+animation_name = "Fall"
+
+[node name="Walk" type="Node" parent="StateManager" node_paths=PackedStringArray("idle_state", "jump_state", "fall_state", "dash_state", "dashdirless_state", "wall_state", "death_state")]
+script = ExtResource("15_ekt4r")
+idle_state = NodePath("../Idle")
+jump_state = NodePath("../Jump")
+fall_state = NodePath("../Fall")
+dash_state = NodePath("../Dash")
+dashdirless_state = NodePath("../Dashdirless")
+wall_state = NodePath("../Wall")
+death_state = NodePath("../Death")
+animation_name = "Run"
+
+[node name="Dash" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "walk_state", "jump_state", "idle_state", "wall_state", "death_state")]
+script = ExtResource("16_s0l5x")
+fall_state = NodePath("../Fall")
+walk_state = NodePath("../Walk")
+jump_state = NodePath("../Jump")
+idle_state = NodePath("../Idle")
+wall_state = NodePath("../Wall")
+death_state = NodePath("../Death")
+animation_name = "Dash"
+
+[node name="Dashdirless" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "walk_state", "jump_state", "idle_state", "wall_state", "dashdirless_state", "death_state")]
+script = ExtResource("17_7vqep")
+fall_state = NodePath("../Fall")
+walk_state = NodePath("../Walk")
+jump_state = NodePath("../Jump")
+idle_state = NodePath("../Idle")
+wall_state = NodePath("../Wall")
+dashdirless_state = NodePath(".")
+death_state = NodePath("../Death")
+animation_name = "Dash"
+
+[node name="Wall" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "jump_state", "walk_state", "dash_state", "dashdirless_state", "walljump_state", "death_state")]
+script = ExtResource("17_cnwr6")
+fall_state = NodePath("../Fall")
+jump_state = NodePath("../Jump")
+walk_state = NodePath("../Walk")
+dash_state = NodePath("../Dash")
+dashdirless_state = NodePath("../Dashdirless")
+walljump_state = NodePath("../WallJump")
+death_state = NodePath("../Death")
+animation_name = "Wall"
+
+[node name="WallJump" type="Node" parent="StateManager" node_paths=PackedStringArray("fall_state", "dash_state", "dashdirless_state")]
+script = ExtResource("18_rcwy2")
+fall_state = NodePath("../Fall")
+dash_state = NodePath("../Dash")
+dashdirless_state = NodePath("../Dashdirless")
+
+[node name="WallHold" type="Node" parent="StateManager"]
+
+[node name="Death" type="Node" parent="StateManager"]
+script = ExtResource("20_lw2d8")
+animation_name = "Death"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -25.0
+offset_top = -22.5
+offset_right = 23.0
+offset_bottom = 0.500004
+text = "Linne"
+label_settings = SubResource("LabelSettings_ghxea")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="Node2D/Deathzone" to="." method="deathzone"]

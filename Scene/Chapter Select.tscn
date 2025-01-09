@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b1tuuj16sf800"]
+[gd_scene load_steps=16 format=3 uid="uid://b1tuuj16sf800"]
 
 [ext_resource type="Script" path="res://Flow/Script/Chapter Select.gd" id="1_afjcu"]
 [ext_resource type="Texture2D" uid="uid://c0swtyguu1lsw" path="res://Recsources/Backrounds/Mountains/m2/1.png" id="2_6smlp"]
@@ -12,30 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://drpuqlyyn1fj5" path="res://Recsources/Backrounds/Mountains/m2/5.png" id="10_3tjhi"]
 [ext_resource type="Texture2D" uid="uid://d12rgp2migytn" path="res://Recsources/Backrounds/Mountains/m2/6.png" id="11_o1o2k"]
 [ext_resource type="Texture2D" uid="uid://be07v7gde2c7w" path="res://Recsources/Backrounds/Mountains/m2/7.png" id="12_50vgq"]
-[ext_resource type="PackedScene" uid="uid://dusxb7qkvawgg" path="res://Flow/Scene/HUD.tscn" id="13_jyup8"]
-
-[sub_resource type="Theme" id="Theme_wq3a0"]
-
-[sub_resource type="SystemFont" id="SystemFont_6ux6h"]
-font_names = PackedStringArray("Georgia")
-font_italic = true
-subpixel_positioning = 0
-
-[sub_resource type="Theme" id="Theme_wa5fy"]
-default_font = SubResource("SystemFont_6ux6h")
-default_font_size = 324
-
-[sub_resource type="Theme" id="Theme_85s4w"]
-
-[sub_resource type="SystemFont" id="SystemFont_h2sqf"]
-font_names = PackedStringArray("Georgia")
-font_italic = true
-font_weight = 999
-oversampling = 10.0
-
-[sub_resource type="Theme" id="Theme_3axm6"]
-default_font = SubResource("SystemFont_h2sqf")
-default_font_size = 232
+[ext_resource type="Theme" uid="uid://cxp24nmxqqrnl" path="res://Flow/Themes/Chapter Selec11t.tres" id="14_f3645"]
+[ext_resource type="Texture2D" uid="uid://eoiyyc5l3dr6" path="res://Recsources/Tilemaps/keyboard_arrow_right_outline.png" id="14_y30gq"]
+[ext_resource type="LabelSettings" uid="uid://coar24vuioxfk" path="res://Flow/Themes/HUDfont.tres" id="15_kr4r3"]
 
 [node name="Chapters" type="Control"]
 process_mode = 3
@@ -119,66 +98,26 @@ texture = ExtResource("11_o1o2k")
 [node name="7" type="Sprite2D" parent="Backrounds"]
 texture = ExtResource("12_50vgq")
 
-[node name="Container" type="MarginContainer" parent="."]
-modulate = Color(0.054902, 0.784314, 0.572549, 0.67451)
-texture_filter = 1
-layout_mode = 0
-offset_left = 9.00003
-offset_top = 12.0
-offset_right = 4356.0
-offset_bottom = 776.0
-scale = Vector2(0.392469, 0.400714)
-theme = SubResource("Theme_wq3a0")
-
-[node name="VBoxContainer" type="GridContainer" parent="Container"]
+[node name="Chapter 1" type="Button" parent="."]
+modulate = Color(0, 0.72549, 0.694118, 1)
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-size_flags_stretch_ratio = 0.0
-theme = SubResource("Theme_wa5fy")
-theme_override_constants/h_separation = 250
-theme_override_constants/v_separation = 140
-columns = 3
-
-[node name="Chapter 1" type="Button" parent="Container/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_85s4w")
+offset_left = 448.0
+offset_top = 49.0
+offset_right = 1608.0
+offset_bottom = 321.0
+scale = Vector2(0.855, 0.855)
+theme = ExtResource("14_f3645")
 text = "Chapter 1"
 flat = true
 
-[node name="Chapter 2" type="Button" parent="Container/VBoxContainer"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 2
-theme = SubResource("Theme_85s4w")
-text = "Chapter 2"
-flat = true
-
-[node name="Chapter 3" type="Button" parent="Container/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_85s4w")
-text = "Chapter 3"
-flat = true
-
-[node name="Chapter 4" type="Button" parent="Container/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_85s4w")
-text = "Chapter 4"
-flat = true
-
-[node name="Chapter 5" type="Button" parent="Container/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_85s4w")
-text = "Chapter 5"
-flat = true
-
-[node name="Chapter 6" type="Button" parent="Container/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_85s4w")
-text = "Chapter 6"
-flat = true
-
-[node name="Button" type="Button" parent="Container/VBoxContainer"]
-layout_mode = 2
-theme = SubResource("Theme_3axm6")
+offset_left = 492.0
+offset_top = 921.0
+offset_right = 1826.0
+offset_bottom = 1193.0
+scale = Vector2(0.655, 0.655)
+theme = ExtResource("14_f3645")
 theme_override_colors/font_color = Color(0, 0.725942, 0.693372, 1)
 theme_override_colors/font_pressed_color = Color(1.42467e-05, 0.870262, 0.833071, 1)
 theme_override_colors/font_hover_color = Color(7.89344e-06, 0.947484, 0.907188, 1)
@@ -187,19 +126,28 @@ theme_override_colors/font_hover_pressed_color = Color(0, 0.72549, 0.694118, 1)
 text = "MainMenu"
 flat = true
 
-[node name="Hud" parent="." instance=ExtResource("13_jyup8")]
-unique_name_in_owner = true
-layout_mode = 1
-offset_left = 23.0
-offset_top = 536.0
-offset_right = 23.0
-offset_bottom = 536.0
-scale = Vector2(4.94356, 3.79215)
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1643.0
+offset_top = 49.0
+offset_right = 1715.0
+offset_bottom = 121.0
+scale = Vector2(4.16211, 4.16211)
+theme = ExtResource("14_f3645")
+theme_override_colors/icon_normal_color = Color(0.67754, 0.304205, 0.627795, 1)
+theme_override_colors/icon_hover_color = Color(0.950949, 0.55697, 0.840439, 1)
+icon = ExtResource("14_y30gq")
+flat = true
 
-[connection signal="pressed" from="Container/VBoxContainer/Chapter 1" to="." method="_on_chapter_1_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/Chapter 2" to="." method="_on_chapter_2_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/Chapter 3" to="." method="_on_chapter_3_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/Chapter 4" to="." method="_on_chapter_4_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/Chapter 5" to="." method="_on_chapter_5_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/Chapter 6" to="." method="_on_chapter_6_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="Label" type="Label" parent="."]
+offset_left = 1686.0
+offset_top = 49.0
+offset_right = 1789.0
+offset_bottom = 72.0
+scale = Vector2(2.145, 2.145)
+text = "Chapter 2"
+label_settings = ExtResource("15_kr4r3")
+
+[connection signal="pressed" from="Chapter 1" to="." method="_on_chapter_1_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

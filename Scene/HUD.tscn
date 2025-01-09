@@ -1,22 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dusxb7qkvawgg"]
+[gd_scene load_steps=3 format=3 uid="uid://dusxb7qkvawgg"]
 
 [ext_resource type="Script" path="res://Flow/Script/HUD.gd" id="1_gq7iy"]
-
-[sub_resource type="SystemFont" id="SystemFont_3pfk2"]
-font_names = PackedStringArray("Georgia")
-font_italic = true
-font_weight = 999
-font_stretch = 50
-subpixel_positioning = 0
-oversampling = 10.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_3xqva"]
-font = SubResource("SystemFont_3pfk2")
-font_size = 22
-font_color = Color(1, 0.478431, 1, 0.337255)
-outline_size = 1
-outline_color = Color(0, 0, 0, 0.501961)
-shadow_offset = Vector2(3.405, 0.83)
+[ext_resource type="LabelSettings" uid="uid://coar24vuioxfk" path="res://Flow/Themes/HUDfont.tres" id="2_ahr4x"]
 
 [node name="Hud" type="Control"]
 layout_mode = 3
@@ -36,8 +21,9 @@ offset_bottom = 40.0
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
-label_settings = SubResource("LabelSettings_3xqva")
+label_settings = ExtResource("2_ahr4x")
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+label_settings = ExtResource("2_ahr4x")

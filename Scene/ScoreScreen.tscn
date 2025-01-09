@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1jqqxfy8daqn"]
+
+[ext_resource type="Texture2D" uid="uid://ppgp6fq7md3u" path="res://Recsources/Backrounds/City/city 1/10.png" id="1_12ow3"]
+[ext_resource type="Script" path="res://Flow/Scene/ScoreScreen.gd" id="1_icw2a"]
+[ext_resource type="PackedScene" uid="uid://dusxb7qkvawgg" path="res://Flow/Scene/HUD.tscn" id="2_nc1m8"]
+[ext_resource type="LabelSettings" uid="uid://coar24vuioxfk" path="res://Flow/Themes/HUDfont.tres" id="3_qoq6b"]
+[ext_resource type="Texture2D" uid="uid://cm2m4juvxw0lr" path="res://Recsources/Tilemaps/keyboard_enter_outline.png" id="4_vl48o"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_icw2a")
+
+[node name="10" type="Sprite2D" parent="."]
+position = Vector2(968, 544.5)
+scale = Vector2(0.840278, 0.840278)
+texture = ExtResource("1_12ow3")
+
+[node name="Hud" parent="." instance=ExtResource("2_nc1m8")]
+unique_name_in_owner = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 715.0
+offset_top = 377.0
+offset_right = 715.0
+offset_bottom = 377.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(4.77, 4.77)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 90.0
+offset_right = 325.0
+offset_bottom = 23.0
+scale = Vector2(7.885, 7.885)
+text = "Chapter 1 Completed"
+label_settings = ExtResource("3_qoq6b")
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 5.70704
+offset_top = 114.014
+offset_right = 219.707
+offset_bottom = 137.014
+text = "Press      To Continue"
+label_settings = ExtResource("3_qoq6b")
+
+[node name="KeyboardEnterOutline" type="Sprite2D" parent="Label/Label2"]
+modulate = Color(0.752941, 0.333333, 0.847059, 0.545098)
+position = Vector2(73.0501, 10.019)
+scale = Vector2(0.382, 0.382)
+texture = ExtResource("4_vl48o")
